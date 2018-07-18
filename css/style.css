@@ -1,0 +1,102 @@
+html {
+  background: url(../images/plate.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#text {
+  color: #5D2410;
+  width: 250px;
+  height: 80px;
+  font-weight: 300;
+  font-family: 'Lobster', cursive;
+  font-size: 120px;
+  position: absolute;
+  top: -4%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 40px;
+  transition: opacity 1000ms;
+}
+
+@keyframes example {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+#text {
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+.button-position {
+  position: absolute;
+  top: 69%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 60px;
+  width: 200px;
+  font-size: 18px;
+}
+
+.button {
+   border-top: 1px solid #96d1f8;
+   background: #65a9d7;
+   background: -webkit-gradient(linear, left top, left bottom, from(#94d4ff), to(#65a9d7));
+   background: -webkit-linear-gradient(top, #94d4ff, #65a9d7);
+   background: -moz-linear-gradient(top, #94d4ff, #65a9d7);
+   background: -ms-linear-gradient(top, #94d4ff, #65a9d7);
+   background: -o-linear-gradient(top, #94d4ff, #65a9d7);
+   -webkit-border-radius: 40px;
+   -moz-border-radius: 40px;
+   border-radius: 40px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 18px;
+   font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #7cb7de;
+   background: #7cb7de;
+   color: #ccc;
+   cursor: pointer;
+   }
+.button:active {
+   border-top-color: #5592ba;
+   background: #5592ba;
+   }
+
+.byline {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 415px;
+  color: #e2e2d4;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  color: fuchsia;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
