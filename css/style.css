@@ -12,7 +12,7 @@ html {
   height: 80px;
   font-weight: 300;
   font-family: 'Lobster', cursive;
-  font-size: 120px;
+  font-size: 80px;
   position: absolute;
   top: -4%;
   bottom: 0;
@@ -91,6 +91,27 @@ html {
   font-family: "Open Sans", sans-serif;
 }
 
+.tiny-byline {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  margin: auto;
+  font-size: 11px;
+  color: #999;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+}
+
+.title {
+  font-family: 'Lobster', cursive;
+  color: ivory;
+  font-size: 64px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  text-shadow: 3px 2px #88884085;
+}
+
 a {
   color: fuchsia;
   text-decoration: none;
@@ -98,5 +119,15 @@ a {
 }
 
 a:hover {
+  text-decoration: underline;
+}
+
+a.muted {
+  color: #777;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+a.muted:hover {
   text-decoration: underline;
 }

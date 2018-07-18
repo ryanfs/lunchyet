@@ -5,19 +5,29 @@ document.addEventListener("DOMContentLoaded", function(event) {
 function lunchYet (clicked) {
   let message;
   let time = new Date().getHours();
-  if (time > 0) message = 'No.';
-  if (time > 11) message = 'Yes!!';
-  if (time > 13) message = 'No.';
-  document.getElementById('text').innerHTML = 'hmm?';
-  setTimeout(function() {
+  if (time > 11 && time < 13) {
+    message = 'Yes!!';
+  } else {
     if (clicked) {
-      message = 'Still ' + message;
-      document.getElementById('text').style.fontSize = '66px';
-      document.getElementById('text').style.top = '8%';
-
+      document.getElementById('button').disabled = true;
+      setTimeout(function() {
+        message = stillNo.next().value
+        document.getElementById('text').innerHTML = message
+        document.getElementById('button').disabled = false;
+      }, 2500);
+      message = 'hmm...'
+    } else {
+      message = 'No.'
     }
-    document.getElementById('text').innerHTML = message;
-  }, 2500);
-  document.getElementById('text').style.fontSize = '120px';
-  document.getElementById('text').style.top = '-4%';
+  }
+  document.getElementById('text').innerHTML = message
+}
+
+let stillNo = isItLunchYet();
+
+function* isItLunchYet() {
+  let emoji  = '<img src = "./images/emoji.png">'
+  while (true) {
+    yield* ['Still no.', 'Not yet.', 'Nope!', 'Negative.', 'Nooope.', emoji]
+  }
 }
